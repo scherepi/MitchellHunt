@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.INFO = new System.Windows.Forms.Label();
+            this.line2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // INFO
@@ -42,12 +43,24 @@
             this.INFO.TabIndex = 0;
             this.INFO.Text = "LOREM IPSUM DOLOR SIT AMET.";
             // 
+            // line2
+            // 
+            this.line2.AutoSize = true;
+            this.line2.Font = new System.Drawing.Font("NSimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.line2.ForeColor = System.Drawing.Color.Red;
+            this.line2.Location = new System.Drawing.Point(25, 100);
+            this.line2.Name = "line2";
+            this.line2.Size = new System.Drawing.Size(279, 20);
+            this.line2.TabIndex = 1;
+            this.line2.Text = "LOREM IPSUM DOLOR SIT AMET.";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(330, 190);
+            this.Controls.Add(this.line2);
             this.Controls.Add(this.INFO);
             this.Name = "Form2";
             this.Text = "SECURE INFO";
@@ -59,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Label INFO;
+        private System.Windows.Forms.Label line2;
     }
 }

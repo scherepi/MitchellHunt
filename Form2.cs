@@ -15,17 +15,21 @@ namespace MitchellHunt
         public Form2()
         {
             InitializeComponent();
-            //ScrollText();
         }
         public void ScrollText()
         {
-            String message = "THE POISON IS BLATANT. YOU KNOW IT IS THERE";
+            // The original message
+            String message = "THE POISON IS BLATANT. YOU KNOW IT IS THERE. TEGASCUS SEVNUN NAK RAMA. ELLT EKNA POVIK SELUM. LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            Console.WriteLine("Current msg length: " + message.Length);
             this.INFO.Text = "";
+            this.line2.Text = "";
             for (int i = 0; i < message.Length; i++)
             {
-                // Extend window to make sure everything fits.
-                if (i >= 30) { }
-                this.INFO.Text += message[i];
+                // Extend window first to make sure everything fits.
+                if (i >= 30 && i < 93) { this.Width += 12; }
+                if (i < 93) { this.INFO.Text += message[i]; }
+                // Then, once we've lengthened, we go for the second line.
+                if (i >= 93) { this.line2.Text += message[i];  }
                 Task.Delay(100).Wait();
             }
         }
